@@ -12,7 +12,9 @@
   </view>
   <view class='tool'>
     <view class='circle-img'>
-      <image src='../../images/sc.png' class='article-like-icon'></image>
+      <image wx:if="{{condition}}" catchtap='collectTap' src='../../images/sch.png' class='article-like-icon'></image>
+      <image wx:else catchtap='collectTap' src='../../images/sc.png' class='article-like-icon'></image>
+
       <image src='../../images/fx.png' class='article-like-icon'></image>      
     </view>
     <view class="horizon"></view>

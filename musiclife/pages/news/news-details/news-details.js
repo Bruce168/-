@@ -2,7 +2,6 @@ var newsData = require("../../data/newsdata.js");
 
 // pages/news/news-details/news-details.js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -18,7 +17,38 @@ Page({
     console.log(newsData.newsData[options.newsid]);
     this.setData({
       newsdetails:newsData.newsData[options.newsid]
-    })
+    });
+    this.setData({
+      newsid : options.newsid
+    });
+
+
+    var newsCollect = wx.getStorageSync('newsCollect');
+    if (newsCollect!=null){
+      this.setData({
+        condition:newsCollect[this.data.newsid]
+      });
+    }else{
+      newsCollect = {};
+      newsCollect[this.data.newsid] = false;
+      wx.setStorageSync('newsCollect', newsCollect);
+      this.setData({
+        condition: false
+      });
+    }
+  },
+
+  collectTap: function(event){
+    var newsCollect = wx.getStorageSync('newsCollect');
+    var newCollect = newsCollect[this.data.newsid];
+    newCollect = !newCollect;
+    newsCollect[this.data.newsid] = newCollect;
+
+    wx.setStorageSync('newsCollect', newsCollect);
+
+    this.setData({
+      condition: newCollect
+    });
   },
 
   /**
