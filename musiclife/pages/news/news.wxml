@@ -1,0 +1,22 @@
+<import src="news-template/news-template.wxml" />
+
+<!--pages/news/news.wxml-->
+<view class='news-container' >
+  <swiper interval="{{interval}}" autoplay="{{autoplay}}" indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" circular="{{circular}}">
+    <swiper-item>
+      <image src='../images/banner1.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../images/banner2.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../images/banner3.jpg'></image>
+    </swiper-item>
+  </swiper>
+
+  <view wx:for="{{ndata}}"  wx:for-index="idx" wx:for-item="itemName" wx:key="key">
+    <view bindtap='gotoDetails' data-newsid='{{itemName.newsid}}'>
+      <template is="newsItem" data="{{...itemName}}" />
+    </view>
+  </view>
+</view>

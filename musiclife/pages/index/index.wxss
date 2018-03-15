@@ -1,0 +1,30 @@
+/**index.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .logo{
+  width: 400rpx;
+  height: 96rpx;
+  margin-top: 100rpx;
+}
+
+.container .username{
+  margin-top: 150rpx;
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+
+.container .btn{
+  margin-top: 180rpx;
+  border: 1rpx solid black;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+
+.container .btn text{
+  color: #109D59
+}

@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <image class='logo' src='../images/logo.png'></image>
+  <text class='username'>Hello,Bruce!</text>
+  <view class='btn' bindtap='gotoNewsTap'>
+    <text>和音乐一起分享时光</text>
+  </view>
+</view>

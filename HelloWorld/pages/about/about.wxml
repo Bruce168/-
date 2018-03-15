@@ -1,0 +1,17 @@
+<!--pages/about/about.wxml-->
+<view class="index-hd">
+  <view class="kind-list-item-hd">
+    <view>{{aboutus}}</view>
+    <image src='../resources/logo.jpg' style='width:50rpx; height:50rpx'></image>
+  </view>
+  <view class='kind-list-item'>
+    <view class='line-css'></view>
+    <view class="kind-list-item-bd" style='font-size:small'>
+      <image class="kind-list-img" src="../resources/kind/map.png" style='width:40rpx; height:40rpx'></image>
+      <navigator url="" class="navigator">
+        <view class="navigator-text">{{address}}</view>
+        <view class="navigator-arrow"></view>
+      </navigator>
+    </view>    
+  </view>
+</view>

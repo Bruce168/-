@@ -1,0 +1,13 @@
+@import "news-template/news-template.wxss";
+
+/* pages/news/news.wxss */
+.news-container swiper{
+  width: 100%;
+  height: 350rpx
+}
+
+.news-container swiper image{
+  width: 100%;
+}
+
+

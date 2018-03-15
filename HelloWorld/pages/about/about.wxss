@@ -1,0 +1,41 @@
+/* pages/about/about.wxss */
+
+.navigator-arrow {
+  padding-right: 26rpx;
+  position: relative;
+}
+
+
+.kind-list-item-hd {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  transition: opacity .3s;
+}
+
+.kind-list-item {
+  width: 100%;
+  height: 100%;
+  display: flex;  
+  transition: opacity .3s;
+  margin-top: 30rpx;
+}
+
+
+
+.line-css {
+    height:1px;
+    background: #888;
+    width: 80%;
+    justify-content: center
+}
+
+.kind-list-item-bd {
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;  
+  transition: opacity .3s;
+  margin-top: 10rpx;
+}
+

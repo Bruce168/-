@@ -1,0 +1,23 @@
+<!--pages/news/news-details/news-details.wxml-->
+<view class='newsdetails-container' >
+  <image src='../../images/sub1.png' class='head-img'></image>
+  <view class='author'>
+    <image src='../../images/head1.png' class='author-icon' />
+    <text class='author-text'>{{newsdetails.author}}</text>
+    <text class='const-text'>发表于</text>
+    <text class='author-date'>{{newsdetails.dataTime}}</text>
+  </view>
+  <view class='title'>
+    {{newsdetails.title}}
+  </view>
+  <view class='tool'>
+    <view class='circle-img'>
+      <image src='../../images/sc.png' class='article-like-icon'></image>
+      <image src='../../images/fx.png' class='article-like-icon'></image>      
+    </view>
+    <view class="horizon"></view>
+  </view>
+  <text class='detail'>
+    {{newsdetails.detail}}
+  </text>
+</view>
