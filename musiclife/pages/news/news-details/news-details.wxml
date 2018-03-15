@@ -6,6 +6,7 @@
     <text class='author-text'>{{newsdetails.author}}</text>
     <text class='const-text'>发表于</text>
     <text class='author-date'>{{newsdetails.dataTime}}</text>
+    <image src="{{isplayer ? '../../images/eartag.png' : '../../images/earphone.png'}}" class='playermusic' catchtap='playermusicTap'></image>
   </view>
   <view class='title'>
     {{newsdetails.title}}
@@ -15,7 +16,7 @@
       <image wx:if="{{condition}}" catchtap='collectTap' src='../../images/sch.png' class='article-like-icon'></image>
       <image wx:else catchtap='collectTap' src='../../images/sc.png' class='article-like-icon'></image>
 
-      <image src='../../images/fx.png' class='article-like-icon'></image>      
+      <image catchtap='onshowTap' src='../../images/fx.png' class='article-like-icon'></image>      
     </view>
     <view class="horizon"></view>
   </view>

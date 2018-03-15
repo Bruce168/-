@@ -15,7 +15,12 @@
   margin-left: 20rpx;
 }
 
-
+.playermusic{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+  vertical-align: middle
+}
 
 
 

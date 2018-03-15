@@ -28,9 +28,9 @@ var newsData = [
       }
     ],
     music: {
-      url: "http://iwen.wiki/sxtstu/music/iamyou.mp3",
-      title: "i am you",
-      coverImg: ""
+      url: "http://qiniuuwmp3.changba.com/1001596596.mp3",
+      title: "凉凉",
+  coverImg:'https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=fd98c41caf1ea8d39e2f7c56f6635b2b/1e30e924b899a901826a289114950a7b0208f53e.jpg'
     }
   },
   {
@@ -66,9 +66,9 @@ var newsData = [
       }
     ],
     music: {
-      url: "http://iwen.wiki/sxtstu/music/sgbl.mp3",
-      title: "时光不老,我们不散",
-      coverImg: ""
+      url: "http://fs.w.kugou.com/201803160212/a6768228e48aa30b2cb385ebd4e6bc2c/G119/M08/11/15/F4cBAFojywmAU9evAEoqSxotd2k806.mp3",
+      title: "女儿国",
+      coverImg: "https://gss0.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/fcfaaf51f3deb48f6aa2353bfb1f3a292cf57808.jpg"
     }
   },
   {

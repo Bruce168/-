@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    isplayer:false
   },
 
   /**
@@ -56,6 +56,65 @@ Page({
       duration: 1000,
       mask:true
     })
+  },
+
+  onshowTap: function(event){
+    /*
+    wx.showModal({
+      title: '提示',
+      content: '这是一个模态弹窗',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })*/
+
+    wx.showActionSheet({
+      itemList: ['A', 'B', 'C'],
+      success: function (res) {
+        console.log(res.tapIndex)
+      },
+      fail: function (res) {
+        console.log(res.errMsg)
+      }
+    })
+  },
+
+  onShareAppMessage: function (res) {
+    
+    return {
+      title: '分享',
+      path: '/pages/news/news-details/news-details',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
+  },
+
+  playermusicTap:function(event){
+    console.log('playmusic');
+    const backgroundAudioManager = wx.getBackgroundAudioManager()
+    if (backgroundAudioManager.paused==false){
+      wx.pauseBackgroundAudio();
+      this.setData({
+        isplayer:false
+      })
+    }else{
+      wx.playBackgroundAudio({
+        dataUrl: newsData.newsData[this.data.newsid].music.url,
+        title: newsData.newsData[this.data.newsid].music.title,
+        coverImgUrl: newsData.newsData[this.data.newsid].music.coverImg
+      })
+      this.setData({
+        isplayer: true
+      })
+    }
   },
 
   /**
