@@ -1,0 +1,88 @@
+<!--pages/movies/movies.wxml-->
+<view class='m-container'>
+  <view class="movie-list-container">
+    <view class="inner-container">
+      <view class="movie-head">
+        <text class="slogan">{{readyData[0].categorytitle}}</text>
+        <view catchtap="onMoreTap" class="more" data-category="{{readyData[0].categorytitle}}">
+          <text class="more-text">更多</text>
+          <image class="more-img" src="../images/arrow-right.png"></image>
+        </view>
+      </view>
+      <view class="movies-container">
+        <block wx:for="{{readyData[0].movies}}" wx:for-index="idx" wx:for-item="itemName">
+          <view class="movie-container" catchtap="onMovieDetailTap" data-movieid="{{itemName.movieId}}">
+            <image class="movie-img" src="{{itemName.coverageUrl}}"></image>
+            <text class="movie-title">{{itemName.title}}</text>
+            <view class="stars-container">
+              <view class="stars">                
+                <block wx:for="{{itemName.stars}}" wx:for-item="i" wx:key="key">
+                  <image wx:if="{{i}}" src="../images/star.png"></image>
+                  <image wx:else src="../images/chat.png"></image>
+                </block>
+              </view>
+              <text class="star-score">{{itemName.average}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class="inner-container">
+      <view class="movie-head">
+        <text class="slogan">{{readyData[1].categorytitle}}</text>
+        <view catchtap="onMoreTap" class="more" data-category="{{readyData[1].categorytitle}}">
+          <text class="more-text">更多</text>
+          <image class="more-img" src="../images/arrow-right.png"></image>
+        </view>
+      </view>
+      <view class="movies-container">
+        <block wx:for="{{readyData[1].movies}}" wx:for-index="idx" wx:for-item="itemName">
+          <view class="movie-container" catchtap="onMovieDetailTap" data-movieid="{{itemName.movieId}}">
+            <image class="movie-img" src="{{itemName.coverageUrl}}"></image>
+            <text class="movie-title">{{itemName.title}}</text>
+            <view class="stars-container">
+              <view class="stars">                
+                <block wx:for="{{itemName.stars}}" wx:for-item="i" wx:key="key">
+                  <image wx:if="{{i}}" src="../images/star.png"></image>
+                  <image wx:else src="../images/chat.png"></image>
+                </block>
+              </view>
+              <text class="star-score">{{itemName.average}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+
+
+
+    <view class="inner-container">
+      <view class="movie-head">
+        <text class="slogan">{{readyData[2].categorytitle}}</text>
+        <view catchtap="onMoreTap" class="more" data-category="{{readyData[2].categorytitle}}">
+          <text class="more-text">更多</text>
+          <image class="more-img" src="../images/arrow-right.png"></image>
+        </view>
+      </view>
+      <view class="movies-container">
+        <block wx:for="{{readyData[1].movies}}" wx:for-index="idx" wx:for-item="itemName">
+          <view class="movie-container" catchtap="onMovieDetailTap" data-movieid="{{itemName.movieId}}">
+            <image class="movie-img" src="{{itemName.coverageUrl}}"></image>
+            <text class="movie-title">{{itemName.title}}</text>
+            <view class="stars-container">
+              <view class="stars">                
+                <block wx:for="{{itemName.stars}}" wx:for-item="i" wx:key="key">
+                  <image wx:if="{{i}}" src="../images/star.png"></image>
+                  <image wx:else src="../images/chat.png"></image>
+                </block>
+              </view>
+              <text class="star-score">{{itemName.average}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

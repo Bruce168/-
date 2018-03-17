@@ -1,14 +1,33 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
     "pages/news/news",
-    "pages/news/news-details/news-details"
+    "pages/news/news-details/news-details",
+    "pages/movies/movies"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#109D59",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/news/news",
+        "text": "新闻",
+        "iconPath": "pages/images/yuedu.png",
+        "selectedIconPath": "pages/images/yuedu.png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",        
+        "iconPath": "pages/images/diany.png",
+        "selectedIconPath": "pages/images/diany.png"
+      }
+    ]
   }
 }

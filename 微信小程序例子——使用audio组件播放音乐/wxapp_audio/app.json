@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "copyright/copyright",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "使用audio组件播放音乐",
+    "navigationBarTextStyle":"black"
+  }
+}

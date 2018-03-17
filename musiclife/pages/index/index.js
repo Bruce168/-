@@ -52,7 +52,7 @@ Page({
     })
   },
   gotoNewsTap:function(e){
-    wx.navigateTo({
+    wx.switchTab({
       url: '../news/news',
       success: function(res) {},
       fail: function(res) {},

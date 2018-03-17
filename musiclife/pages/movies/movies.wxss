@@ -1,0 +1,89 @@
+/* pages/movies/movies.wxss */
+
+.m-container{
+    background-color: #f1f1f1;
+}
+
+.movie-list-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0
+}
+
+.inner-container{
+    margin: 0  auto 20rpx;
+}
+
+.movie-head {
+  padding: 30rpx 20rpx 22rpx;
+}
+
+.slogan {
+  font-size: 24rpx;
+}
+
+.more {
+  float: right;
+}
+
+.more-text {
+  vertical-align: middle;
+  margin-right: 10rpx;
+  color: #1f4ba5;
+  font-size: 24rpx;
+}
+
+.more-img {
+  width: 9rpx;
+  height: 16rpx;
+  vertical-align: middle;
+}
+
+.movies-container{
+    display:flex;
+    flex-direction: row;
+}
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 22rpx;
+}
+
+.movie-img {
+  width: 200rpx;
+  height: 270rpx;
+  padding-bottom: 20rpx;
+}
+
+.movie-title{
+    margin-bottom: 16rpx;
+    font-size: 24rpx;
+}
+
+
+.stars-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  height: 17rpx;
+  margin-right: 24rpx;
+  margin-top: 6rpx;
+}
+
+.stars image {
+  padding-left: 3rpx;
+  height: 17rpx;
+  width: 17rpx;
+}
+
+.star-score {
+  font-size: 12px;
+  color: #1f3463;
+  vertical-align: middle;
+}
