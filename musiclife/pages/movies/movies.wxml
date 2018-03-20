@@ -1,5 +1,12 @@
 <!--pages/movies/movies.wxml-->
 <view class='m-container'>
+  <view class='search'>
+    <view class="df search_arr">  
+      <icon class="searchcion" size='20' type='search'></icon>  
+      <input class="bc_text" placeholder="请输入关键字" value="{{searchValue}}" />        
+    </view> 
+    <view class='sousuo'>搜索</view>      
+  </view>   
   <view class="movie-list-container">
     <view class="inner-container">
       <view class="movie-head">

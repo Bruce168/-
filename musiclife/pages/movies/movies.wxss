@@ -1,18 +1,18 @@
 /* pages/movies/movies.wxss */
 
-.m-container{
-    background-color: #f1f1f1;
+.m-container {
+  background-color: #f1f1f1;
 }
 
 .movie-list-container {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  margin-top: 0
+  margin-top: 0;
 }
 
-.inner-container{
-    margin: 0  auto 20rpx;
+.inner-container {
+  margin: 0 auto 20rpx;
 }
 
 .movie-head {
@@ -40,9 +40,9 @@
   vertical-align: middle;
 }
 
-.movies-container{
-    display:flex;
-    flex-direction: row;
+.movies-container {
+  display: flex;
+  flex-direction: row;
 }
 
 .movie-container {
@@ -57,11 +57,10 @@
   padding-bottom: 20rpx;
 }
 
-.movie-title{
-    margin-bottom: 16rpx;
-    font-size: 24rpx;
+.movie-title {
+  margin-bottom: 16rpx;
+  font-size: 24rpx;
 }
-
 
 .stars-container {
   display: flex;
@@ -86,4 +85,57 @@
   font-size: 12px;
   color: #1f3463;
   vertical-align: middle;
+}
+
+.search {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.search_arr {
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.search_arr input {
+  margin-left: 60rpx;
+  height: 60rpx;
+  border-radius: 5px;
+  width:200px
+}
+
+.bc_text {
+  font-size: 24rpx;  
+}
+
+.sousuo {
+  margin-left: 15rpx;
+  margin-top: 10rpx;
+  width: 15%;
+  line-height:60rpx;
+  vertical-align:middle;
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  height:60rpx
+}
+
+.page_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.searchcion {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  position: absolute;
+  left: 25rpx;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  text-align: center;
 }
