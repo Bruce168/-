@@ -1,9 +1,8 @@
-var util = require("../utils/util.js");
-
+var util = require("../../utils/util.js");
 //获取全局APP里的URL
 var app = getApp();
 
-// pages/movies/movies.js
+// pages/movies/movies-more/movies-more.js
 Page({
 
   /**
@@ -17,15 +16,31 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var in_theaters = app.globalData.baseUrl + "in_theaters?start=0_count=3";
-    var coming_soon = app.globalData.baseUrl + "coming_soon?start=0_count=3";
-    var top250 = app.globalData.baseUrl + "top250?start=0_count=3";
+    //console.log(options);
+
+    //设置标题
+    var title = options.categoryName;
+    wx.setNavigationBarTitle({
+      title: title
+    })
+
+    var in_theaters = app.globalData.baseUrl + "in_theaters";
+    var coming_soon = app.globalData.baseUrl + "coming_soon";
+    var top250 = app.globalData.baseUrl + "top250";
 
     wx.showNavigationBarLoading();
     var datas = [];
-    this.http(in_theaters, 'in_theaters', '正在热映', datas);
-    this.http(coming_soon, 'coming_soon', '即将上映', datas);
-    this.http(top250, 'top250', '排行榜', datas);
+    switch (title) {
+      case '正在热映':
+        this.http(in_theaters, 'in_theaters', '正在热映', datas);
+        break;
+      case '即将上映':
+        this.http(coming_soon, 'coming_soon', '即将上映', datas);
+        break;
+      case '排行榜':
+        this.http(top250, 'top250', '排行榜', datas);
+        break;
+    }
   },
 
   http: function (uUrl, category, categoryTitle, datas) {
@@ -64,7 +79,6 @@ Page({
     }
 
     var readyData = {};
-
     readyData = {
       categorytitle: categoryTitle,
       movies: movies
@@ -73,22 +87,31 @@ Page({
     datas.push(readyData);
     this.setData({ readyData: datas });
     wx.hideNavigationBarLoading();
+
+    console.log(datas);
   },
 
-  onMoreTap: function (event) {
-    var categoryName = event.currentTarget.dataset.category;
-    console.log("categoryName:" + categoryName);
-    wx.navigateTo({
-      url: 'movies-more/movies-more?categoryName=' + categoryName,
-    })
+  /**
+   * 页面加载到底部
+   */
+  onReachBottom: function () {
+    console.log("onReachBottom");
+  },
+
+  /**
+   * 页面到顶部后向下拉加载刷新
+   */
+  onPullDownRefresh: function () {
+    console.log("onPullDownRefresh");
   },
 
   onMovieDetailTap: function (event) {
     var movieid = event.currentTarget.dataset.movieid;
     wx.navigateTo({
-      url: 'movies-details/movies-details?movieid=' + movieid,
+      url: '../movies-details/movies-details?movieid=' + movieid,
     })
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

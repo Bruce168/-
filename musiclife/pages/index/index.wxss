@@ -1,4 +1,10 @@
 /**index.wxss**/
+
+
+page{
+    background-color: #fff;
+}
+
 .container {
   display: flex;
   flex-direction: column;

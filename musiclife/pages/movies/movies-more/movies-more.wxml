@@ -1,0 +1,29 @@
+<!--pages/movies/movies.wxml-->
+<view class='m-container'>
+  <view class="movie-list-container">
+    <view class="inner-container">
+      <view class="movie-head">
+
+      </view>
+      <view class="grid-container">
+        <block wx:for="{{readyData[0].movies}}" wx:for-item="movie" wx:key="key">
+          <view class="single-view-container" catchtap="onMovieDetailTap" data-movieid="{{movie.movieId}}">
+            <view class="movie-container">
+              <image class="movie-img" src="{{movie.coverageUrl}}"></image>
+              <text class="movie-title">{{movie.title}}</text>
+              <view class="stars-container">
+                <view class="stars">
+                  <block wx:for="{{movie.stars}}" wx:for-item="i" wx:key="key">
+                    <image wx:if="{{i}}" src="../../images/star.png"></image>
+                    <image wx:else src="../../images/chat.png"></image>
+                  </block>
+                </view>
+                <text class="star-score">{{movie.average}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
