@@ -9,10 +9,19 @@
     <servlet-name>JsonServlet</servlet-name>
     <servlet-class>com.bruce.servlet.JsonServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>JsonFromDouBanServlet</servlet-name>
+    <servlet-class>com.bruce.servlet.JsonFromDouBanServlet</servlet-class>
+  </servlet>
+
 
   <servlet-mapping>
     <servlet-name>JsonServlet</servlet-name>
     <url-pattern>/servlet/jsonServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>JsonFromDouBanServlet</servlet-name>
+    <url-pattern>/servlet/JsonFromDouBanServlet</url-pattern>
   </servlet-mapping>	
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

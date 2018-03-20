@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.bruce.utils.GetJson;
 
-public class JsonServlet extends HttpServlet {
+public class JsonFromDouBanServlet extends HttpServlet {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 3660429250473405631L;
+	private static final long serialVersionUID = -424985339055079157L;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -26,8 +26,7 @@ public class JsonServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		// String url = "https://api.douban.com/v2/movie/";
-		String url = "https://api.douban.com/";
+		String url = "https://api.douban.com/v2/movie/";
 		String param = request.getParameter("param");
 
 		System.out.println("param:" + param);
